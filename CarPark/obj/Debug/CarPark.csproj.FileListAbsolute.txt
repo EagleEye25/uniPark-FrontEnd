@@ -4,3 +4,9 @@ C:\Users\Jay\Desktop\License Plate\CarPark\CarPark\CarPark\bin\Debug\CarPark.pdb
 C:\Users\Jay\Desktop\License Plate\CarPark\CarPark\CarPark\obj\Debug\CarPark.csprojResolveAssemblyReference.cache
 C:\Users\Jay\Desktop\License Plate\CarPark\CarPark\CarPark\obj\Debug\CarPark.exe
 C:\Users\Jay\Desktop\License Plate\CarPark\CarPark\CarPark\obj\Debug\CarPark.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark\bin\Debug\CarPark.exe.config
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark\obj\Debug\CarPark.exe
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark\obj\Debug\CarPark.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark\bin\Debug\CarPark.exe
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark\bin\Debug\CarPark.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark\obj\Debug\CarPark.csprojResolveAssemblyReference.cache

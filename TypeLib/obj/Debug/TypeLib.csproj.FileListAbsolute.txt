@@ -1,0 +1,5 @@
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\TypeLib\bin\Debug\TypeLib.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\TypeLib\bin\Debug\TypeLib.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\TypeLib\obj\Debug\TypeLib.csprojResolveAssemblyReference.cache
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\TypeLib\obj\Debug\TypeLib.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\TypeLib\obj\Debug\TypeLib.pdb
