@@ -1,0 +1,17 @@
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarParkFront.exe.config
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.csprojResolveAssemblyReference.cache
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.Main.Forms.frmEntrance.resources
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.Main.Forms.frmSetup.resources
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.Properties.Resources.resources
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.csproj.GenerateResource.Cache
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarParkFront.exe
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarParkFront.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\MaterialSkin.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.exe
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\obj\Debug\CarParkFront.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\TypeLib.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\TypeLib.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarPark-BLL.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarPark-BLL.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarPark-DAL.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\CarPark-DAL.pdb

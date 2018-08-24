@@ -1,0 +1,8 @@
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\obj\Debug\CarPark-BLL.csprojResolveAssemblyReference.cache
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\bin\Debug\CarPark-BLL.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\bin\Debug\CarPark-DAL.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\bin\Debug\TypeLib.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\bin\Debug\CarPark-DAL.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\bin\Debug\TypeLib.pdb
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\obj\Debug\CarPark-BLL.dll
+C:\Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarPark-BLL\obj\Debug\CarPark-BLL.pdb
