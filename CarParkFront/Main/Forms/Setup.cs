@@ -44,6 +44,7 @@ namespace CarParkFront.Main.Forms
                 // File format Gate Type, Gate ID, Cam, Scanner, Entrins Type
                 StreamReader sr = new StreamReader("Settings.txt");
                 string[] line = sr.ReadLine().Split(',');
+            //    File.Delete(@"C: \Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\Plate.txt");
 
                 // Gate                   
                 if (line[0] == "M") // Main Gate
@@ -88,6 +89,7 @@ namespace CarParkFront.Main.Forms
                 {
                     rdoEntrance.Select();
                 }
+                sr.Close();
             }
             
             
@@ -221,9 +223,19 @@ namespace CarParkFront.Main.Forms
 
         private void rdoEnableScan_CheckedChanged(object sender, EventArgs e)
         {
-            rdoDisableCam.Enabled = true;
-            rdoEnableCam.Enabled = true;
-            rdoDisableCam.Select();
+            if (rdoArea.Checked == true)
+            {
+                rdoDisableCam.Select();
+                rdoDisableCam.Enabled = false;
+                rdoEnableCam.Enabled = false;
+            }
+            else
+            {
+                rdoDisableCam.Select();
+                rdoDisableCam.Enabled = true;
+                rdoEnableCam.Enabled = true;
+            }
+
         }
 
         private void rdoDisableScan_CheckedChanged(object sender, EventArgs e)

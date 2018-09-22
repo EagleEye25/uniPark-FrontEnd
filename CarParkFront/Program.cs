@@ -17,18 +17,19 @@ namespace CarParkFront
         static void Main()
         {
             // Checks if the settings file exists
-            if (File.Exists("Settings.txt"))
-            {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmEntrance());
-            }
-            else
-            { 
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmSetup());
-            }
+                if (File.Exists("Settings.txt"))
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new frmEntrance());
+                }
+                else
+                { 
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new frmSetup());
+                } 
+            
 
         }
     }

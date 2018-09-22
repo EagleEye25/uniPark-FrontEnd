@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CarPark">
+      <HintPath>..\CarPark\bin\Debug\CarPark.exe</HintPath>
+    </Reference>
     <Reference Include="CarPark-BLL">
       <HintPath>..\CarPark-BLL\bin\Debug\CarPark-BLL.dll</HintPath>
     </Reference>
