@@ -33,6 +33,7 @@
             this.matbtnSettings = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlCam = new System.Windows.Forms.Panel();
             this.pnlManual = new System.Windows.Forms.Panel();
+            this.mattxtTagNum = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.matbtnCancel = new MaterialSkin.Controls.MaterialFlatButton();
             this.matbtnAccept = new MaterialSkin.Controls.MaterialFlatButton();
             this.mattxtPlate = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -45,6 +46,8 @@
             this.matlblError = new MaterialSkin.Controls.MaterialLabel();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.ClearTip = new System.Windows.Forms.ToolTip(this.components);
+            this.matbtnManual = new MaterialSkin.Controls.MaterialFlatButton();
+            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.pnlCam.SuspendLayout();
             this.pnlManual.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCapture)).BeginInit();
@@ -108,6 +111,7 @@
             // pnlManual
             // 
             this.pnlManual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.pnlManual.Controls.Add(this.mattxtTagNum);
             this.pnlManual.Controls.Add(this.matbtnCancel);
             this.pnlManual.Controls.Add(this.matbtnAccept);
             this.pnlManual.Controls.Add(this.mattxtPlate);
@@ -115,6 +119,24 @@
             this.pnlManual.Name = "pnlManual";
             this.pnlManual.Size = new System.Drawing.Size(312, 128);
             this.pnlManual.TabIndex = 4;
+            // 
+            // mattxtTagNum
+            // 
+            this.mattxtTagNum.Depth = 0;
+            this.mattxtTagNum.Hint = "";
+            this.mattxtTagNum.Location = new System.Drawing.Point(54, 12);
+            this.mattxtTagNum.MaxLength = 32767;
+            this.mattxtTagNum.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mattxtTagNum.Name = "mattxtTagNum";
+            this.mattxtTagNum.PasswordChar = '\0';
+            this.mattxtTagNum.SelectedText = "";
+            this.mattxtTagNum.SelectionLength = 0;
+            this.mattxtTagNum.SelectionStart = 0;
+            this.mattxtTagNum.Size = new System.Drawing.Size(208, 23);
+            this.mattxtTagNum.TabIndex = 3;
+            this.mattxtTagNum.TabStop = false;
+            this.mattxtTagNum.Text = "Enter tag number";
+            this.mattxtTagNum.UseSystemPasswordChar = false;
             // 
             // matbtnCancel
             // 
@@ -250,11 +272,46 @@
             this.materialFlatButton1.UseVisualStyleBackColor = true;
             this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click_2);
             // 
+            // matbtnManual
+            // 
+            this.matbtnManual.AutoSize = true;
+            this.matbtnManual.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.matbtnManual.Depth = 0;
+            this.matbtnManual.Icon = null;
+            this.matbtnManual.Location = new System.Drawing.Point(309, 361);
+            this.matbtnManual.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.matbtnManual.MouseState = MaterialSkin.MouseState.HOVER;
+            this.matbtnManual.Name = "matbtnManual";
+            this.matbtnManual.Primary = false;
+            this.matbtnManual.Size = new System.Drawing.Size(107, 36);
+            this.matbtnManual.TabIndex = 8;
+            this.matbtnManual.Text = "Manual Log";
+            this.matbtnManual.UseVisualStyleBackColor = true;
+            this.matbtnManual.Click += new System.EventHandler(this.matbtnManual_Click_1);
+            // 
+            // materialFlatButton2
+            // 
+            this.materialFlatButton2.AutoSize = true;
+            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialFlatButton2.Depth = 0;
+            this.materialFlatButton2.Icon = null;
+            this.materialFlatButton2.Location = new System.Drawing.Point(333, 97);
+            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialFlatButton2.Name = "materialFlatButton2";
+            this.materialFlatButton2.Primary = false;
+            this.materialFlatButton2.Size = new System.Drawing.Size(25, 36);
+            this.materialFlatButton2.TabIndex = 9;
+            this.materialFlatButton2.Text = ".";
+            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            // 
             // frmEntrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 406);
+            this.Controls.Add(this.materialFlatButton2);
+            this.Controls.Add(this.matbtnManual);
             this.Controls.Add(this.materialFlatButton1);
             this.Controls.Add(this.matlblError);
             this.Controls.Add(this.matbtnClear);
@@ -294,5 +351,8 @@
         private MaterialSkin.Controls.MaterialLabel matlblError;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private System.Windows.Forms.ToolTip ClearTip;
+        private MaterialSkin.Controls.MaterialFlatButton matbtnManual;
+        private MaterialSkin.Controls.MaterialSingleLineTextField mattxtTagNum;
+        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
     }
 }

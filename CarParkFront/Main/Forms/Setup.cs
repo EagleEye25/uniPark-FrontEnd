@@ -108,12 +108,16 @@ namespace CarParkFront.Main.Forms
 
             pnlMainGate.Visible = true;
             lblDesc.Text = "Main Gate";
-            rdoDisableCam.Select();
-            rdoDisableScan.Select();
+          //  rdoEnableCam.Select();
+            rdoEnableScan.Select();
             rdoDisableCam.Enabled = false;
             rdoEnableCam.Enabled = false;
-            rdoDisableScan.Enabled = true;
-            rdoEnableScan.Enabled = true;
+            rdoDisableScan.Enabled = false;
+            rdoEnableScan.Enabled = false;
+            rdoEnableCam.Select();
+
+
+
 
         }
 
@@ -132,11 +136,11 @@ namespace CarParkFront.Main.Forms
             lblDesc.Text = "Parking Area";
             rdoDisableCam.Enabled = false;
             rdoEnableCam.Enabled = false;
-            rdoDisableScan.Enabled = true;
-            rdoEnableScan.Enabled = true;
+            rdoDisableScan.Enabled = false;
+            rdoEnableScan.Enabled = false;
 
             rdoDisableCam.Select();
-            rdoDisableScan.Select();
+            rdoEnableScan.Select();
             
 
         }
@@ -229,12 +233,7 @@ namespace CarParkFront.Main.Forms
                 rdoDisableCam.Enabled = false;
                 rdoEnableCam.Enabled = false;
             }
-            else
-            {
-                rdoDisableCam.Select();
-                rdoDisableCam.Enabled = true;
-                rdoEnableCam.Enabled = true;
-            }
+
 
         }
 
@@ -243,6 +242,11 @@ namespace CarParkFront.Main.Forms
             rdoDisableCam.Select();
             rdoDisableCam.Enabled = false;
             rdoEnableCam.Enabled = false;
+        }
+
+        private void materialFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("This form is used to setup the or change the curent setup for the system \nThe main gate must have a scanner and a cammera. \nThe parking areas can not have a cammera but must have a scanner. ");
         }
     }
 }

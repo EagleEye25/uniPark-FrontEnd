@@ -58,6 +58,7 @@ namespace CarParkFront.Main.Forms
 
         private void frmEntrance_Load(object sender, EventArgs e)
         {
+            materialFlatButton2.Visible = false;
             if (File.Exists("Plate") == true)
             {
                 //
@@ -237,7 +238,10 @@ namespace CarParkFront.Main.Forms
 
                                         }
                                     }
-                                    if (double.Parse(accuracy.Split(' ')[1]) > 85)
+                                    accuracy = accuracy.Split(' ')[1];
+                                    accuracy = accuracy.Split('.')[0];
+                                    plate = line;
+                                    if (double.Parse(accuracy) > 85)
                                     {
                                         handler.BLL_AddPersonnelLog(userID, plate, DateTime.Now, int.Parse(gateID));
                                         matlblError.Text = "User Log Added";
@@ -250,6 +254,17 @@ namespace CarParkFront.Main.Forms
                                     else
                                     {
                                         pnlManual.Visible = true;
+                                        mattxtTagNum.Focus();
+
+                                        if (mattxtUserID.Text[length] == '#')
+                                        {
+                                            mattxtTagNum.Text = mattxtUserID.Text.TrimEnd('#');
+                                        }
+                                        else
+                                        {
+                                            mattxtTagNum.Text = mattxtUserID.Text;
+                                        }
+                                        
                                         mattxtUserID.Enabled = false;
                                     }  
                                 }
@@ -314,8 +329,10 @@ namespace CarParkFront.Main.Forms
 
                                         }
                                     }
-
-                                    if (double.Parse(accuracy.Split(' ')[1]) > 85)
+                                    accuracy = accuracy.Split(' ')[1];
+                                    accuracy = accuracy.Split('.')[0];
+                                    plate = line;
+                                    if (double.Parse(accuracy) > 85)
                                     {
                                         if (plateIn == null || plateIn != plate)
                                         {
@@ -333,6 +350,17 @@ namespace CarParkFront.Main.Forms
                                     else
                                     {
                                         pnlManual.Visible = true;
+                                        mattxtTagNum.Focus();
+                                        if (mattxtUserID.Text[length] == '#')
+                                        {
+                                            mattxtTagNum.Text = mattxtUserID.Text.TrimEnd('#');
+                                        }
+                                        else
+                                        {
+                                            mattxtTagNum.Text = mattxtUserID.Text;
+                                        }
+                                        
+                                        mattxtUserID.Enabled = false;
                                     }
 
                                 }
@@ -485,8 +513,9 @@ namespace CarParkFront.Main.Forms
 
                                         }
                                     }
-
-                                    if (double.Parse(accuracy.Split(' ')[1]) > 85)
+                                    accuracy = accuracy.Split(' ')[1];
+                                    accuracy = accuracy.Split('.')[0];
+                                    if (double.Parse(accuracy) > 85)
                                     {
                                         handler.BLL_AddPersonnelLog(userID, plate, DateTime.Now, int.Parse(gateID));
                                         matlblError.Text = "User Log Added";
@@ -496,6 +525,8 @@ namespace CarParkFront.Main.Forms
                                     else
                                     {
                                         pnlManual.Visible = true;
+                                        mattxtTagNum.Focus();
+                                        mattxtTagNum.Text = mattxtUserID.Text;
                                         mattxtUserID.Enabled = false;
                                     }
                                 }
@@ -563,8 +594,7 @@ namespace CarParkFront.Main.Forms
                                     accuracy = accuracy.Split(' ')[1];
                                     accuracy = accuracy.Split('.')[0];
                                     plate = line;
-                                    MessageBox.Show(accuracy);
-                                    if (Convert.ToDouble(accuracy) > 85) 
+                                    if (double.Parse(accuracy) > 85) 
                                     {
                                         if (plateIn == null || plateIn != plate)
                                         {
@@ -582,6 +612,9 @@ namespace CarParkFront.Main.Forms
                                     else
                                     {
                                         pnlManual.Visible = true;
+                                        mattxtTagNum.Focus();
+                                        mattxtTagNum.Text = mattxtUserID.Text;
+                                        mattxtUserID.Enabled = false;
                                     }
 
                                 }
@@ -733,9 +766,11 @@ namespace CarParkFront.Main.Forms
             {
                 // Gets user ID
                 uspGetPersonnelID id = new uspGetPersonnelID();
-                id = handler.BLL_PersonnelID(mattxtUserID.Text.TrimEnd('#'));
-                userID = id.PersonnelID;
-            }
+                userID = mattxtUserID.Text;
+          //      id = handler.BLL_PersonnelID(mattxtUserID.Text.TrimEnd('#'));
+          //      userID = id.PersonnelID;
+
+                }
 
             plate = mattxtPlate.Text;
 
@@ -767,18 +802,38 @@ namespace CarParkFront.Main.Forms
                     }
                 }
             }
+            else if (gate == "A")
+            {
+                uspGetLogID log = handler.BLL_GetLogID(userID);
+                logID = log.PersonnelLogID;
+                uspGetAccessLevel access = handler.BLL_GetAccessLevel(gateID);
+                accessLevel = access.ParkingAreaAccessLevel;
+                if (entrins == "En")
+                {
+                    handler.BLL_AddParkingLog(gateID, logID, DateTime.Now);
+                    matlblError.Text = "User Log Added";
+                }
+                else if (entrins == "Ex")
+                {
+                    handler.BLL_UpdateParkingLog(logID, DateTime.Now);
+                    matlblError.Text = "User Log Added";
+                }
+            }
 
             mattxtUserID.Enabled = true;
-            mattxtPlate.Text = "";
+            mattxtPlate.Text = "Enter plate number";
+            mattxtTagNum.Text = "Enter tag number";
             mattxtUserID.Text = "";
             mattxtUserID.Focus();
+            pnlManual.Visible = false;
         }
 
         private void matbtnCancel_Click_1(object sender, EventArgs e)
         {
 
             mattxtUserID.Enabled = true;
-            mattxtPlate.Text = "";
+            mattxtPlate.Text = "Enter plate number";
+            mattxtTagNum.Text = "Enter tag number";
             mattxtUserID.Text = "";
             mattxtUserID.Focus();
             pnlManual.Visible = false;
@@ -803,7 +858,15 @@ namespace CarParkFront.Main.Forms
 
         private void materialFlatButton1_Click_2(object sender, EventArgs e)
         {
-            MessageBox.Show("This form is where you can add users to a log \n of people that enter and exits the gate. \n \nTo see what the buttons will do hold your mouse pointer over a button for its description to show");
+            MessageBox.Show("This form is where you can add users to a log \nof people that enter and exits the gate. \n \nTo see what the buttons will do hold your mouse pointer over a button for its description to show");
+        }
+
+        private void matbtnManual_Click_1(object sender, EventArgs e)
+        {
+            pnlManual.Visible = true;
+            materialFlatButton2.Focus();
+            mattxtUserID.Enabled = false;
+            
         }
     }
 }
