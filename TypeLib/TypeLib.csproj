@@ -43,9 +43,15 @@
     <Compile Include="Interfaces\IDBAccess.cs" />
     <Compile Include="Interfaces\IDBHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\uspCheckGuest.cs" />
     <Compile Include="ViewModels\uspCheckTag.cs" />
+    <Compile Include="ViewModels\uspGetAccessLevel.cs" />
     <Compile Include="ViewModels\uspGetAllAreas.cs" />
+    <Compile Include="ViewModels\uspGetLogID.cs" />
     <Compile Include="ViewModels\uspGetMainGate.cs" />
+    <Compile Include="ViewModels\uspGetPersonnelID.cs" />
+    <Compile Include="ViewModels\uspGetPlate.cs" />
+    <Compile Include="ViewModels\uspGetUserAccessLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

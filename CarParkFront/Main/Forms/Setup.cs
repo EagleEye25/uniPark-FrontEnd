@@ -44,6 +44,7 @@ namespace CarParkFront.Main.Forms
                 // File format Gate Type, Gate ID, Cam, Scanner, Entrins Type
                 StreamReader sr = new StreamReader("Settings.txt");
                 string[] line = sr.ReadLine().Split(',');
+            //    File.Delete(@"C: \Users\Wihan\Desktop\Wihan\NMMU\Project 3de Year\uniPark-FrontEnd\CarParkFront\bin\Debug\Plate.txt");
 
                 // Gate                   
                 if (line[0] == "M") // Main Gate
@@ -88,6 +89,7 @@ namespace CarParkFront.Main.Forms
                 {
                     rdoEntrance.Select();
                 }
+                sr.Close();
             }
             
             
@@ -106,12 +108,16 @@ namespace CarParkFront.Main.Forms
 
             pnlMainGate.Visible = true;
             lblDesc.Text = "Main Gate";
-            rdoDisableCam.Select();
-            rdoDisableScan.Select();
+          //  rdoEnableCam.Select();
+            rdoEnableScan.Select();
             rdoDisableCam.Enabled = false;
             rdoEnableCam.Enabled = false;
-            rdoDisableScan.Enabled = true;
-            rdoEnableScan.Enabled = true;
+            rdoDisableScan.Enabled = false;
+            rdoEnableScan.Enabled = false;
+            rdoEnableCam.Select();
+
+
+
 
         }
 
@@ -130,11 +136,11 @@ namespace CarParkFront.Main.Forms
             lblDesc.Text = "Parking Area";
             rdoDisableCam.Enabled = false;
             rdoEnableCam.Enabled = false;
-            rdoDisableScan.Enabled = true;
-            rdoEnableScan.Enabled = true;
+            rdoDisableScan.Enabled = false;
+            rdoEnableScan.Enabled = false;
 
             rdoDisableCam.Select();
-            rdoDisableScan.Select();
+            rdoEnableScan.Select();
             
 
         }
@@ -221,9 +227,14 @@ namespace CarParkFront.Main.Forms
 
         private void rdoEnableScan_CheckedChanged(object sender, EventArgs e)
         {
-            rdoDisableCam.Enabled = true;
-            rdoEnableCam.Enabled = true;
-            rdoDisableCam.Select();
+            if (rdoArea.Checked == true)
+            {
+                rdoDisableCam.Select();
+                rdoDisableCam.Enabled = false;
+                rdoEnableCam.Enabled = false;
+            }
+
+
         }
 
         private void rdoDisableScan_CheckedChanged(object sender, EventArgs e)
@@ -231,6 +242,11 @@ namespace CarParkFront.Main.Forms
             rdoDisableCam.Select();
             rdoDisableCam.Enabled = false;
             rdoEnableCam.Enabled = false;
+        }
+
+        private void materialFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("This form is used to setup the or change the curent setup for the system \nThe main gate must have a scanner and a cammera. \nThe parking areas can not have a cammera but must have a scanner. ");
         }
     }
 }
